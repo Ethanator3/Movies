@@ -3,53 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan's Movies</title>
+    <title>Ethan's Movie Catalog</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #121212;
+            color: #fff;
         }
         header {
-            background-color: #444;
-            color: #fff;
-            padding: 1rem 2rem;
+            background-color: #1f1f1f;
+            padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            color: #ff4c4c;
         }
         main {
             padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .movie-card {
+            background-color: #1f1f1f;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
-        .movie-container {
-            display: inline-block;
-            margin: 1rem;
-            text-align: center;
+        .movie-poster {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
         }
-        .movie-image {
-            width: 200px;
-            height: 300px;
-            background-color: #ddd;
-            display: block;
-            margin: 0 auto;
-            border: 1px solid #ccc;
+        .movie-info {
+            padding: 1rem;
         }
-        .caption {
-            margin-top: 0.5rem;
-            font-size: 1rem;
+        .movie-title {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
         }
-        .rating {
-            margin-top: 0.2rem;
-            color: #007BFF;
+        .movie-review {
+            color: #ffc107;
             font-weight: bold;
-            font-size: 1.1rem;
         }
         footer {
-            background-color: #444;
-            color: #fff;
+            background-color: #1f1f1f;
             text-align: center;
-            padding: 1rem 2rem;
+            padding: 1rem;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -58,31 +65,31 @@
 </head>
 <body>
     <header>
-        <h1>Ethan's Movies</h1>
+        <h1>Ethan's Movie Catalog</h1>
     </header>
     <main>
-        <p>Welcome to Ethan's Movies! Here you can find reviews, recommendations, and discussions about the latest and greatest in cinema.</p>
-        
-        <div class="movie-container">
-            <img src="Interstellar.jpg" alt="Interstellar" class="movie-image">
-            <div class="caption">Interstellar</div>
-            <div class="rating">9.6</div>
+        <div class="movie-card">
+            <img src="images/movie1.jpg" alt="Movie 1 Poster" class="movie-poster">
+            <div class="movie-info">
+                <div class="movie-title">Movie 1</div>
+                <div class="movie-review">⭐⭐⭐⭐☆</div>
+                <p>A great movie with thrilling action and drama.</p>
+            </div>
         </div>
 
-        <div class="movie-container">
-            <div class="movie-image"></div>
-            <div class="caption">Movie 2</div>
-            <div class="number">2.0</div>
+        <div class="movie-card">
+            <img src="images/movie2.jpg" alt="Movie 2 Poster" class="movie-poster">
+            <div class="movie-info">
+                <div class="movie-title">Movie 2</div>
+                <div class="movie-review">⭐⭐⭐☆☆</div>
+                <p>A fun, lighthearted comedy for the weekend.</p>
+            </div>
         </div>
 
-        <div class="movie-container">
-            <div class="movie-image"></div>
-            <div class="caption">Movie 3</div>
-            <div class="number">3.0</div>
-        </div>
+        <!-- Add more movie-card blocks here -->
     </main>
     <footer>
-        <p>&copy; 2024 Ethan's Movies. All rights reserved.</p>
+        <p>&copy; 2024 Ethan's Movie Catalog</p>
     </footer>
 </body>
 </html>
