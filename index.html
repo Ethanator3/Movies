@@ -37,10 +37,11 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
-        .movie-poster {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
+       .movie-poster {
+            width: 100%; /* Fills the width of the movie-card */
+            aspect-ratio: 2 / 3; /* Ensures 2:3 aspect ratio for posters */
+            object-fit: cover; /* Prevents distortion or stretching */
+            border-bottom: 1px solid #ccc;
         }
         .movie-info {
             padding: 1rem;
