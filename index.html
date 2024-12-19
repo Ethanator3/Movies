@@ -22,13 +22,14 @@
         }
         header h1 {
             margin: 0;
-            color: #ff4c4c;
+            color: white;
         }
         main {
             padding: 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
+            justify-items: center;
         }
         .movie-card {
             background-color: #1f1f1f;
@@ -37,7 +38,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
-       .movie-poster {
+            .movie-poster {
             width: 100%; /* Fills the width of the movie-card */
             aspect-ratio: 2 / 3; /* Ensures 2:3 aspect ratio for posters */
             object-fit: cover; /* Prevents distortion or stretching */
@@ -51,7 +52,7 @@
             margin: 0.5rem 0;
         }
         .movie-review {
-            color: #ffc107;
+            color: blue;
             font-weight: bold;
         }
         footer {
@@ -66,23 +67,55 @@
 </head>
 <body>
     <header>
-        <h1>Ethan's Movie Catalog</h1>
+        <h1>Movies</h1>
     </header>
     <main>
         <div class="movie-card">
-            <img src="Interstellar.jpg" alt="Movie 1 Poster" class="movie-poster">
+            <img src="Interstallar.jpg" alt="Movie 1 Poster" class="movie-poster">
             <div class="movie-info">
-                <div class="movie-title">Movie 1</div>
-                <div class="movie-review">⭐⭐⭐⭐☆</div>
+                <div class="movie-title">Interstellar</div>
+                <div class="movie-review">9.6</div>
                 <p>A great movie with thrilling action and drama.</p>
             </div>
         </div>
 
         <div class="movie-card">
+            <img src="Oppenheimer.jpg" alt="Movie 2 Poster" class="movie-poster">
+            <div class="movie-info">
+                <div class="movie-title">Oppenheimer</div>
+                <div class="movie-review">9.5</div>
+                <p>Nolan returns with the best movie of the year</p>
+            </div>
+        </div>
+       <div class="movie-card">
+            <img src="Spider-man.jpg" alt="Movie 3 Poster" class="movie-poster">
+            <div class="movie-info">
+                <div class="movie-title">Spider-Man: Across the Spider-Verse</div>
+                <div class="movie-review">8.6</div>
+                <p>Easily one of the best animated movies of all time</p>
+            </div>
+        </div>
+       <div class="movie-card">
             <img src="images/movie2.jpg" alt="Movie 2 Poster" class="movie-poster">
             <div class="movie-info">
                 <div class="movie-title">Movie 2</div>
-                <div class="movie-review">⭐⭐⭐☆☆</div>
+                <div class="movie-review">8.6</div>
+                <p>A fun, lighthearted comedy for the weekend.</p>
+            </div>
+        </div>
+       <div class="movie-card">
+            <img src="images/movie2.jpg" alt="Movie 2 Poster" class="movie-poster">
+            <div class="movie-info">
+                <div class="movie-title">Movie 2</div>
+                <div class="movie-review">8.6</div>
+                <p>A fun, lighthearted comedy for the weekend.</p>
+            </div>
+        </div>
+       <div class="movie-card">
+            <img src="images/movie2.jpg" alt="Movie 2 Poster" class="movie-poster">
+            <div class="movie-info">
+                <div class="movie-title">Movie 2</div>
+                <div class="movie-review">8.6</div>
                 <p>A fun, lighthearted comedy for the weekend.</p>
             </div>
         </div>
@@ -94,4 +127,3 @@
     </footer>
 </body>
 </html>
-
